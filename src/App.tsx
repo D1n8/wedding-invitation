@@ -1,7 +1,85 @@
+import { useState } from 'react';
 import './App.css';
+import TimeAction from './components/TimeAction';
+const drinks = ['Водка', 'Вино', 'Шампанское'];
 
 function App() {
-  return <div></div>;
+  const [firstLastName, setFirstLastName] = useState('');
+  const [coupleName, setCoupleName] = useState('');
+  const [selectedDrinks, setSelectedDrinks] = useState<string[]>([]);
+  const [comms, setComms] = useState('');
+
+  const handleToggle = (drink: string) => {
+    setSelectedDrinks((prev) =>
+      prev.includes(drink)
+        ? prev.filter((d) => d !== drink)
+        : [...prev, drink],
+    );
+  };
+
+  return (
+    <main>
+      <header className="header">
+        <h1 className="title">WEDDING DAY</h1>
+        <p className="text header-text">
+          Приглашаем Вас разделить с нами праздник, посвященный дню нашей свадьбы 08.08.2025!
+        </p>
+        {/*Фото*/}
+      </header>
+      <section className="section section__place">
+        <h2 className='subtitle'>МЕСТО ПРОВЕДЕНИЯ</h2>
+        <p className='text place-text'>Место проведения ...</p>
+        {/*Фото*/}
+      </section>
+      <section className="section section__dress">
+        <h2 className="subtitle">ДРЕСС КОД</h2>
+        <p className="text dress-text">Нам будет особенно приятно видеть Вас в нарядах цветовой гаммы нашей свадьбы</p>
+        {/*Фото цветовой гаммы*/}
+      </section>
+      <section className="sectuin section__time">
+        <h2 className="subtitle">ТАЙМИНГ</h2>
+        <TimeAction time={'15:00'} action={'ЦЕРЕМОНИЯ'} descr={'Торжественное бракосочетание под открытым небом'} />
+        <TimeAction time={'16:00-17:00'} action={'ФУРШЕТ'} descr={'В это время будет организован фуршет с напитками и закусками'} />
+        <TimeAction time={'17:00'} action={'БАНКЕТ'} descr={'Начало банкет, угощения, тосты, танцы и развлекательная программа до поднего вечера!'} />
+      </section>
+      <section className="section section__form">
+        <h2 className="subtitle subtitle-form">Анкета</h2>
+        <p className="text">Пожалуйста, ответьте на вопросы ниже, тем самым подтвердив свое присутствие</p>
+        <form action="POST">
+          <div className="input-container">
+            <label htmlFor="firstLastName">Ваше Имя и Фамилия</label>
+            <input id='firstLastName' type="text" placeholder='Имя и Фамилия' value={firstLastName} onChange={(e) => setFirstLastName(e.target.value)} />
+          </div>
+
+          <div className="input-container">
+            <label htmlFor="coupleName">Если будете с парой, укажите ее имя</label>
+            <input id='coupleName' type="text" placeholder='Имя пары' value={coupleName} onChange={(e) => setCoupleName(e.target.value)} />
+          </div>
+
+          <div className="checkboxs-container">
+            <label className="text-lg font-semibold mb-2">Что предпочитаете из напитков?</label>
+            {drinks.map((drink) => (
+              <label key={drink} className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={selectedDrinks.includes(drink)}
+                  onChange={() => handleToggle(drink)}
+                />
+                <span>{drink}</span>
+              </label>
+            ))}
+          </div>
+
+          <div className="input-container">
+            <label htmlFor="comms">Для комментариев и пожеланий</label>
+            <input id='comms' type="text" value={comms} onChange={(e) => setComms(e.target.value)} />
+          </div>
+
+          <button type='button' className="btn btn__submit">Отправить</button>
+        </form>
+      </section>
+    </main>
+  );
 }
 
 export default App;

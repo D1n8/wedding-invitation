@@ -20,7 +20,6 @@ export default tseslint.config(
       'react-refresh': reactRefresh,
     },
     rules: {
-      'prettier/prettier': 'error',
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
