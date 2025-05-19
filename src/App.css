@@ -1,8 +1,71 @@
 body {
-  background-image: url('../public/paper.jpg');
+  color: #00720b;
+  background: linear-gradient(rgba(253, 246, 185, 0.466), rgba(253, 246, 185, 0.466)),
+    url('../public/paper.jpg');
+  /* font-family: "Pacifico"; */
+  font-family: "Great Vibes";
+
 }
 
 main {
   max-width: 400px;
   margin: 0 auto;
+}
+
+.background-images {
+  position: relative;
+  /* Относительный контейнер для абсолютных картинок */
+  width: 100%;
+  height: 100%;
+  /* Или высота контента, если хотите */
+  pointer-events: none;
+  z-index: -1;
+  /* Чтобы картинки не мешали кликам */
+  overflow: visible;
+}
+
+.bg-img {
+  position: absolute;
+  pointer-events: none;
+  /* Чтобы клики проходили */
+  user-select: none;
+  /* Запретить выделение */
+  opacity: 1;
+  /* По желанию — прозрачность */
+}
+
+/* Позиционируем картинки */
+.bg-img-1 {
+  top: 10%;
+  left: 5%;
+  width: 150px;
+  height: 100px;
+}
+
+.bg-img-2 {
+  top: 50%;
+  right: 10%;
+  width: 120px;
+  height: 100px;
+}
+
+.bg-img-3 {
+  top: 50%;
+  right: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.bg-img-4 {
+  top: 50%;
+  right: 30%;
+  width: 100px;
+  height: 100px;
+}
+
+.bg-img-5 {
+  top: 70%;
+  right: 70%;
+  width: 100px;
+  height: 100px;
 }
