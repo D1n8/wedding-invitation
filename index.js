@@ -56,3 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     animatedElements.forEach(el => observer.observe(el));
 });
+
+document.querySelector("form").addEventListener("submit", function (event) {
+    setTimeout(() => {
+        this.reset();
+    }, 2000); 
+});
