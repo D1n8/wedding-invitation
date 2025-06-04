@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  font-family: "Open Sans";
+  font-weight: lighter;
+  text-align: center;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section__top {
+  background: url("../img/bgwed.png") center/cover no-repeat;
+}
+.section__invitation {
+  background-color: #F3F1E9;
+}
+.section__timing {
+  background-color: #F3F1E9;
+}
+.section__quiz {
+  background: url("../img/bgwed.png") center/cover no-repeat;
+}
+
+.section-container {
+  align-items: center;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 100px 36px;
+}
+.section-container .subtitle {
+  margin-bottom: 40px;
+  font-size: 26px;
+  font-weight: lighter;
+}
+.section-container .title {
+  font-size: 36px;
+  font-weight: normal;
+}
+.section-container__top {
+  min-height: 100vh;
+}
+.section-container__top .title {
+  margin-bottom: 90px;
+  font-weight: lighter;
+}
+.section-container__top .names {
+  margin-bottom: 130px;
+  font-family: "Great Vibes";
+  font-size: 80px;
+}
+.section-container__top .symbol {
+  font-family: "Aguafina Script";
+}
+.section-container__top .date {
+  font-size: 36px;
+}
+.section-container__invitation .text {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+.section-container__invitation .first {
+  margin-bottom: 20px;
+}
+.section-container__invitation .left {
+  margin-bottom: 40px;
+  font-size: 26px;
+  font-weight: normal;
+}
+.section-container__invitation .time-container {
+  display: flex;
+  justify-content: space-between;
+}
+.section-container__invitation .time-box {
+  max-width: 60px;
+}
+.section-container__invitation .number {
+  font-size: 28px;
+  font-weight: bold;
+}
+.section-container__invitation .time-system {
+  font-size: 24px;
+}
+.section-container__place .title {
+  margin-bottom: 40px;
+}
+.section-container__place .place-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+}
+.section-container__place .text {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+.section-container__timing .title {
+  margin-bottom: 50px;
+}
+.section-container__timing .action-box {
+  width: 100%;
+  padding-block: 15px;
+}
+.section-container__timing .action-box:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+.section-container__timing .time {
+  font-size: 32px;
+  font-family: "Oooh Baby";
+}
+.section-container__timing .text {
+  font-size: 28px;
+}
+.section-container__dress .title {
+  margin-bottom: 65px;
+}
+.section-container__dress .dress-img {
+  width: 100%;
+  max-width: 400px;
+}
+.section-container__dress .text {
+  margin-bottom: 65px;
+  font-size: 22px;
+}
+.section-container__quiz {
+  text-align: left;
+}
+.section-container__quiz .title {
+  text-align: center;
+  margin-bottom: 65px;
+}
+.section-container__quiz .input-text {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 10px 5px;
+  font-size: 20px;
+  font-family: "Open Sans";
+  font-weight: lighter;
+}
+.section-container__quiz label {
+  font-size: 20px;
+}
+.section-container__quiz .radio {
+  background-color: inherit;
+  font-size: 17px;
+}
+.section-container__quiz input {
+  border: 1px solid black;
+  background-color: inherit;
+}
+.section-container__quiz .selector-box {
+  margin-bottom: 90px;
+}
+.section-container__quiz p {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+.section-container__quiz .radio-box:not(:last-child) {
+  margin-bottom: 20px;
+}
+.section-container__quiz .btn {
+  padding: 15px 55px;
+  border: 1px solid black;
+  background-color: inherit;
+  font-family: "Open Sans";
+  font-size: 16px;
+  cursor: pointer;
+  transition: all ease-in-out 0.3s;
+}
+.section-container__quiz .btn:hover, .section-container__quiz .btn:focus, .section-container__quiz .btn:active {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.section-container__quiz input[type=radio] {
+  transform: scale(1.5);
+  accent-color: black;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .section-container {
+    max-width: 800px;
+  }
+}
+@media (max-width: 800px) {
+  .section-container {
+    max-width: 500px;
+  }
+  .section-container__invitation .left {
+    margin-bottom: 20px;
+  }
+  .section-container__invitation .number {
+    font-size: 24px;
+  }
+  .section-container__invitation .time-system {
+    font-size: 20px;
+  }
+}
+@media (max-width: 600px) {
+  .section-container {
+    max-width: 412px;
+  }
+  .section-container .title {
+    font-size: 27px;
+  }
+  .section-container__top .date {
+    font-size: 27px;
+  }
+  .section-container__top .names {
+    font-size: 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

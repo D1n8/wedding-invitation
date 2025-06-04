@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    font-family: 'Open Sans';
+    font-weight: lighter;
+    text-align: center;
+}
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section {
+
+    &__top {
+        background: url('../img/bgwed.png') center / cover no-repeat;
+    }
+
+    &__invitation {
+        background-color: #F3F1E9;
+    }
+
+    &__timing {
+        background-color: #F3F1E9;
+    }
+
+    &__quiz {
+        background: url('../img/bgwed.png') center / cover no-repeat;
+    }
+}
+
+.section-container {
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 100px 36px;
+
+    .subtitle {
+        margin-bottom: 40px;
+        font-size: 26px;
+        font-weight: lighter;
+    }
+
+    .title {
+        font-size: 36px;
+        font-weight: normal;
+    }
+
+    &__top {
+        min-height: 100vh;
+        .title {
+            margin-bottom: 90px;
+            font-weight: lighter;
+            // font-size: 27px;
+        }
+
+        .names {
+            margin-bottom: 130px;
+            font-family: 'Great Vibes';
+            font-size: 80px;
+        }
+
+        .symbol {
+            font-family: 'Aguafina Script';
+        }
+
+        .date {
+            font-size: 36px;
+        }
+    }
+
+    &__invitation {
+        // display: flex;
+        // flex-direction: column;
+        // align-items: center;
+
+        .text {
+            margin-bottom: 40px;
+            font-size: 20px;
+        }
+
+        .first {
+            margin-bottom: 20px;
+        }
+
+        .left {
+            margin-bottom: 40px;
+            font-size: 26px;
+            font-weight: normal;
+        }
+
+        .time-container {
+            // width: 600px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .time-box {
+            max-width: 60px;
+        }
+
+        .number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .time-system {
+            font-size: 24px;
+        }
+    }
+
+    &__place {
+
+        .title {
+            margin-bottom: 40px;
+        }
+
+        .place-img {
+            width: 100%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .text {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+    }
+
+    &__timing {
+        .title {
+            margin-bottom: 50px;
+        }
+
+        .action-box {
+            width: 100%;
+            padding-block: 15px;
+        }
+
+        .action-box:not(:last-child) {
+            border-bottom: 1px solid black;
+        }
+
+        .time {
+            font-size: 32px;
+            font-family: 'Oooh Baby';
+        }
+
+        .text {
+            font-size: 28px;
+        }
+    }
+
+    &__dress {
+        .title {
+            margin-bottom: 65px;
+        }
+
+        .dress-img {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .text {
+            margin-bottom: 65px;
+            font-size: 22px;
+        }
+    }
+
+    &__quiz {
+        text-align: left;
+
+        .title {
+            text-align: center;
+            margin-bottom: 65px;
+        }
+
+        .input-text {
+            width: 100%;
+            margin-bottom: 50px;
+            padding: 10px 5px;
+            font-size: 20px;
+            font-family: 'Open Sans';
+            font-weight: lighter;
+        }
+
+        label {
+            font-size: 20px;
+        }
+
+        .radio {
+            background-color: inherit;
+            font-size: 17px;
+        }
+
+        input {
+            border: 1px solid black;
+            background-color: inherit;
+        }
+
+        .selector-box {
+            margin-bottom: 90px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+        .radio-box:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 15px 55px;
+            border: 1px solid black;
+            background-color: inherit;
+            font-family: 'Open Sans';
+            font-size: 16px;
+            cursor: pointer;
+            transition: all ease-in-out 0.3s;
+        }
+
+        .btn:hover, .btn:focus, .btn:active{
+            background-color: rgba($color: #000000, $alpha: 0.2);
+        }
+
+        input[type="radio"] {
+            transform: scale(1.5);
+            accent-color: black;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+    }
+}
+
+@import 'media.scss';

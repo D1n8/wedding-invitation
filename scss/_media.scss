@@ -1,0 +1,41 @@
+@media (max-width: 1200px){
+    .section-container{
+        max-width: 800px;
+    }
+}
+
+@media (max-width: 800px) {
+    .section-container{
+        max-width: 500px
+    }
+
+    .section-container__invitation .left{
+        margin-bottom: 20px;
+    }
+
+    .section-container__invitation .number{
+        font-size: 24px;
+    }
+
+    .section-container__invitation .time-system{
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px){
+    .section-container{
+        max-width: 412px
+    }
+
+    .section-container .title {
+        font-size: 27px;
+    }
+
+    .section-container__top .date {
+        font-size: 27px;
+    }
+
+    .section-container__top .names{
+        font-size: 60px;
+    }
+}

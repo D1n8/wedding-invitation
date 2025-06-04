@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/media.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Great+Vibes&family=Oooh+Baby&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <title>Приглашение на свадьбу</title>
+    
+</head>
+
+<body>
+    <main class="main">
+        <section class="section section__top">
+            <div class="section-container section-container__top">
+                <h1 class="title fade-up">Приглашаем Вас на главное событие в нашей жизни - День Свадьбы!</h1>
+                <p class="names fade-up">Тимур <br><span class="symbol">&</span><br> Ляйсан</p>
+                <p class="text date fade-up">Торжество состоится<br> 08 | Августа | 2025</p>
+            </div>
+        </section>
+
+        <section class="section section__invitation">
+            <div class="section-container section-container__invitation">
+                <h2 class="subtitle fade-up">ДОРОГИЕ РОДНЫЕ И БЛИЗКИЕ!</h2>
+                <p class="text first">Мы очень хотим оказаться в окружении самых близких и дорогих для нас людей.</p>
+                <p class="text">С огромным удовольствием приглашаем Вас разделить с нами этот праздник!</p>
+                <p class="text left">До свадьбы осталось:</p>
+                <div class="time-container">
+                    <div class="time-box">
+                        <span class="number" id="days">0</span>
+                        <span class="time-system" id="days-label">дней</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="number" id="hours">0</span>
+                        <span class="time-system" id="hours-label">часов</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="number" id="minutes">0</span>
+                        <span class="time-system" id="minutes-label">минуты</span>
+                    </div>
+                    <div class="time-box">
+                        <span class="number" id="seconds">0</span>
+                        <span class="time-system" id="seconds-label">секунд</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section__place">
+            <div class="section-container section-container__place">
+                <h2 class="title fade-up">МЕСТО ПРОВЕДЕНИЯ</h2>
+                <p class="text">База отдыха “Русский остров”</p>
+                <img class="place-img" src="img/ru.jpg" alt="">
+            </div>
+        </section>
+
+        <section class="section section__timing">
+            <div class="section-container section-container__timing">
+                <h2 class="title fade-up">ПРОГРАММА ДНЯ</h2>
+                <div class="action-box">
+                    <p class="time">15:30</p>
+                    <p class="text">Сбор гостей</p>
+                </div>
+                <div class="action-box">
+                    <p class="time">16:00</p>
+                    <p class="text">Торжественная церемония</p>
+                </div>
+                <div class="action-box">
+                    <p class="time">17:00</p>
+                    <p class="text">Свадебный банкет</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section__dress">
+            <div class="section-container section-container__dress">
+                <h2 class="title fade-up">ДРЕСС КОД</h2>
+                <p class="text">Нам будет особенно приятно видеть Вас в нарядах цветовой гаммы нашей свадьбы</p>
+                <img class="dress-img" src="img/dress.png" alt="">
+            </div>
+        </section>
+
+        <section class="section section__quiz">
+            <form class="section-container section-container__quiz" action="https://formspree.io/f/xzzgzzzb" method="POST">
+                <h2 class="title fade-up">АНКЕТА ГОСТЯ</h2>
+                <div class="input-box">
+                    <label for="name">Ваше имя и фамилия</label>
+                    <input class="input-text" type="text" id="name" name="Имя и фамилия" required>
+                </div>
+                <div class="input-box">
+                    <label for="couple">Если будете с парой укажите ее имя</label>
+                    <input class="input-text" type="text" id="couple" name="Имя пары">
+                </div>
+                <div class="selector-box">
+                    <p>Подтвердите свое присутствие</p>
+                    <div class="radio-box">
+                        <input class="radio" type="radio" id="yes" name="Подтвердите свое присутствие" value="Обязательно буду">
+                        <label class="radio" for="yes">Обязательно буду</label>
+                    </div>
+                    <div class="radio-box">
+                        <input class="radio" type="radio" id="no" name="Подтвердите свое присутствие" value="К сожалению, не смогу присутствовать">
+                        <label class="radio" for="no">К сожалению, не смогу присутствовать</label>
+                    </div>
+
+                </div>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </section>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
